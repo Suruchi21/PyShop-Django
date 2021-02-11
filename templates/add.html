@@ -1,0 +1,9 @@
+{% if user.is_authenticated %}
+    <h1>Item Added Succesfully</h1>
+    <button><a href="{% url 'cont' %}">Continue Shopping</a></button>
+{% else %}
+    You don't seem to have an account
+    <a href="{% url 'register' %}"><button class="btn btn-outline-success" type="button">Create an account</button></a><br>
+    Already a member?
+    <a href="{% url 'login' %}"><button class="btn btn-outline-success" type="button">Login to your account</button></a>
+{%endif%}
